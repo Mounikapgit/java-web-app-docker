@@ -25,3 +25,19 @@ spec:
         image: mounikapagadala/dockerswarmfile:1
         ports:
         - containerPort: 8080 
+
+---
+# Node Port Service
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: javawebapp
+  name: javawebapp
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    name: javawebapp
