@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: javawebappcontainer
-        image: mounikapagadala/dockerswarmfile:1
+        image: mounikapagadala/dockerswarmfile:TAG
         ports:
         - containerPort: 8080 
 
